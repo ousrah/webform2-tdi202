@@ -1,0 +1,98 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication10.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style>
+        body{
+            background-color:lightgray;
+        }
+        #wrapper{
+            width:80%;
+            margin:auto;
+            background-color:white;
+        }
+        #tblHeader{
+            height:150px;
+
+        }
+            #tblNav{
+height:50px;
+            }
+            #tblContent{
+                height:700px;
+                vertical-align:top;
+            }
+
+#tblFooter{ background-color:gray;
+            height:70px;
+            text-align:center;
+}
+.banniere
+{
+    width:100%;
+}
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table id="wrapper">
+            <tr id="tblHeader">
+                <td>
+                    <img src="img/bannere.jpg" class="banniere"/>
+
+                </td>
+            </tr>
+             <tr id="tblNav">
+                <td>
+
+                    <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Large" ForeColor="#284E98" Orientation="Horizontal" StaticSubMenuIndent="10px">
+                        <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicMenuStyle BackColor="#B5C7DE" />
+                        <DynamicSelectedStyle BackColor="#507CD1" />
+                        <Items>
+                            <asp:MenuItem Text="Ouvrages" Value="Ouvrages" NavigateUrl="~/listeOuvrages.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Editeurs" Value="Editeurs"></asp:MenuItem>
+                            <asp:MenuItem Text="Ecrivains" Value="Ecrivains"></asp:MenuItem>
+                            <asp:MenuItem Text="classifications" Value="classifications"></asp:MenuItem>
+                        </Items>
+                        <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticSelectedStyle BackColor="#507CD1" />
+                    </asp:Menu>
+
+                </td>
+            </tr>
+             <tr id="tblContent">
+                <td> <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+          
+                
+            </asp:ContentPlaceHolder>
+        </div></td>
+            </tr>
+             <tr id="tblFooter">
+                <td>
+                    CopyRight ISMO 2022
+
+
+                </td>
+            </tr>
+        </table>
+
+
+       
+
+
+
+    </form>
+</body>
+</html>
